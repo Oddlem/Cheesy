@@ -1,4 +1,4 @@
-#### DEV LOG
+#### SET UP
 
 1. Installed express using `npm install express`
 2. Initialize package using `npm init -y`
@@ -12,4 +12,3 @@
 6. Ran `node db.js` to create the new table
 7. In DBeaver, created a new connection to this container
 8. Created the following, in the following order: app.js, resource layer, service layer, dao layer
-9. Implemented 

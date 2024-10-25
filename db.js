@@ -33,11 +33,25 @@ const createJokesTable = async function (data) {
         )`)
 }
 
+const createUserTable = async function (userData) {
+    const sql = await pool.query(`CREATE TABLE IF NOT EXISTS users(
+        username varchar,
+        password varchar,
+        id uuid,
+        created_at timestamp,
+        updated_at timestamp,
+        deleted_at timestamp
+        )`)
+}
+
 database().then(() => {
     return createJokesTable()
 })
+.then(() => {
+    return createUserTable()
+})
 .then(async () => {
-    console.log("Table 'jokes' has been created")
+    console.log("Tables have been established")
     const test = await pool.query(`SELECT * FROM jokes;`)
 })
 .catch(err => console.log(err))

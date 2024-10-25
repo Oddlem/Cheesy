@@ -14,6 +14,7 @@ Using Postgres as a database management system, three databases are utilized for
     * body-parser https://www.npmjs.com/package/body-parser 
     * Joi https://www.npmjs.com/package/joi 
     * uuid https://www.npmjs.com/package/uuid 
+    * bcrypt https://www.npmjs.com/package/bcrypt
 
 * User authentication
     * jsonwebtoken https://www.npmjs.com/package/jsonwebtoken 
