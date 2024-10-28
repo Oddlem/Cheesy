@@ -18,11 +18,12 @@ const create_user_dao = async function (data) {
 }
 
 const retrieve_user_dao = async function (data) {
-    const sql = `SELECT password FROM users WHERE username = $1`
+    const sql = `SELECT password, username, id FROM users WHERE username = $1`
     const parameters = [data.username]
     const result = await pool.query(sql, parameters)
+    console.log()
 
-    return result.rows[0]?.password
+    return result.rows[0]
 }
 
 module.exports = {

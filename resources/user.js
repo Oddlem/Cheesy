@@ -23,17 +23,15 @@ router.post("/register", validate_data(user_schema), async (req, res) => {
 
 router.post("/sign-in", async (req, res) => {
     try {
-        const password = await retrieve_password_dao(req.body)
+        const user = await retrieve_password_dao(req.body)
 
-
-        bcrypt.compare(req.body.password, password, function(err, result) {
+        bcrypt.compare(req.body.password, user.password, function(err, result) {
 
             if (err) {
                 return res.status(500).send(err.message)
             }
             else if (result) {
-                const user_token = jwt.sign({password: password}, secret_key, {expiresIn: "1hr"})
-                console.log(user_token)
+                const user_token = jwt.sign({ id: user.id, username: user.username }, secret_key, {expiresIn: "1hr"})
                 return res.status(200).set("Authorization", `Bearer ${user_token}`).json("Successfully logged in")
             }
             else {
