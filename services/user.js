@@ -25,6 +25,10 @@ const create_user = async (data) => {
     return result
 }
 
+const generate_token = async (data) => {
+    
+}
+
 module.exports = {
     create_user
 }
