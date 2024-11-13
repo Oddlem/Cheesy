@@ -1,0 +1,4 @@
+1. Ran the following command: `npm create vite@latest frontend-jokes -- --template react`
+    * I created a manually created a folder called "frontend" with a single file called "setup.md", and ran `npm create vite@latest . -- --template react` thinking it'd install in THAT folder. I got a prompt saying how there's files and how it can't install and long story short, I accidentally deleted all my backend and had to roll back the changes. oops! I'm writing this here so that I don't accidentally do that again. 
+    * This command also installs vite and walks me through other steps, so it's quite literally the only thing I have to run. I love vite!!
+2. Inside of src, added the following folders: `layouts, services, utils, (components-> common)`
