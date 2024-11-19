@@ -1,3 +1,7 @@
+### Running the app
+-For the backend, start the server with `node app.js`
+-For the frontend, use `cd frontend-jokes` and then `npm run dev`
+
 ### Description
 A service which ingests different types of jokes from different sources, both external and internal. The user can create an account and can view/submit their own jokes through a visual interface.
 
