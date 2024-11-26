@@ -21,13 +21,12 @@ export default function SubmitJokes() {
         catch (err) {
             return console.error.send(err)
         }
-        
-
     }
 
     const handleEvent = (event) => {
         const content = event.target.value
         setJokes(content)
+        console.log(content)
     }
 
     return (

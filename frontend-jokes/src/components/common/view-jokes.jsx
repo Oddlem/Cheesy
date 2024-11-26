@@ -6,15 +6,20 @@ export default function ViewJokes() {
 
 const getJokes = async () => {
     // const [jokes, setJoke] = useState([])
-
-    const result = await axios.get("http://localhost:3000/jokes/joke")
-    const jokeObj = result.data.rows
-    const contentJokes = jokeObj.map(joke => joke.content)
-    // setJoke(contentJokes)
-
-    return console.log(contentJokes)
+    try {
+        // the original URL is an ngrok tunnel, so I decided to anonymize it
+        const result = await axios.get("url/jokes/joke")
+        console.log(result)
+        const jokeObj = result.data.rows
+        const contentJokes = jokeObj.map(joke => joke.content)
+            console.log(contentJokes)
+        // setJoke(contentJokes)
+    }
+    catch (err) {
+        console.error.send(err)
+    }
   }
-
+ 
   return (
     <>
         <div className="container">
@@ -24,7 +29,7 @@ const getJokes = async () => {
                 <h1 className="title">All jokes:</h1>
                 <button onClick={getJokes}>Click to refresh</button>
                 <div>
-                    {/* the data goes here */}
+                    {}
                 </div>
                 </div>
             </div>

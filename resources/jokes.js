@@ -20,7 +20,7 @@ router.post("/new", async (req, res) => {
 })
 
 router.get("/joke", async (req, res) => {
-    const result = await retrieve_jokes(req.body)
+    const result = await retrieve_jokes(req.body.rows)
 
     return res.send(result)
 })

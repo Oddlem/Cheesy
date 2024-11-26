@@ -38,3 +38,8 @@ Using Postgres as a database management system, three databases are utilized for
 ### Data flows
 
 ![yay diagram fullstack jokes](https://github.com/user-attachments/assets/a839026d-d5d1-421f-a591-cc7fa09373f5)
+
+### Deployment
+1. Download the ngrok terminal
+2. Follow the instructions to set it up
+3. Use `ngrok http 3000` to deploy the app!
